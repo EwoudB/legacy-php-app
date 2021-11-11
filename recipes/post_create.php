@@ -18,6 +18,10 @@ if (
 $title = $postData['title'];
 $recipe = $postData['recipe'];
 
+$mysqlClient = $mysqlClient ?? NULL;
+$loggedUser = $loggedUser ?? [];
+$rootPath = $rootPath ?? '';
+
 $insertRecipe = $mysqlClient->prepare('INSERT INTO recipes(title, recipe, author, is_enabled) VALUES (:title, :recipe, :author, :is_enabled)');
 $insertRecipe->execute([
     'title' => $title,

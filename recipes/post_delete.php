@@ -14,6 +14,8 @@ if (!isset($postData['id'])) {
 }
 
 $id = $postData['id'];
+$mysqlClient = $mysqlClient ?? NULL;
+$rootUrl = $rootUrl ?? '';
 
 $deleteRecipeStatement = $mysqlClient->prepare('DELETE FROM recipes WHERE recipe_id = :id');
 $deleteRecipeStatement->execute([

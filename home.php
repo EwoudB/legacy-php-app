@@ -20,7 +20,12 @@
     <!-- Formulaire de connexion -->
     <?php include_once('login.php'); ?>
         <h1>Site de Recettes !</h1>
-
+        
+        <?php
+            $limit = $limit ?? 10;
+            $recipes = $recipes ?? [];
+            $users = $users ?? [];
+        ?>
         <!-- Plus facile à lire -->
         <?php foreach (get_recipes($recipes, $limit) as $recipe) : ?>
             <article>

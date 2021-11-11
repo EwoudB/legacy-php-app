@@ -4,6 +4,10 @@
     include_once('./../variables.php');
 ?>
 
+<?php
+    $rootUrl = $rootUrl ?? '';
+    $recipe = $recipe ?? ['recipe_id' => 0];
+?>
 <form action="<?php echo($rootUrl . 'comments/post_create.php'); ?>" method="POST">
     <div class="mb-3 visually-hidden">
         <input class="form-control" type="text" name="recipe_id" value="<?php echo($recipe['recipe_id']); ?>" />

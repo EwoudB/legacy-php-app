@@ -4,6 +4,10 @@
     include_once('functions.php');
 ?>
 
+<?php
+  $rootUrl = $rootUrl ?? '';
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo($rootUrl). 'home.php'; ?>">Site de Recettes</a>

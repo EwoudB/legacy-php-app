@@ -28,6 +28,7 @@ $message = $postData['message'];
 <body>
     <div class="container">
 
+    <?php $rootPath = $rootPath ?? ''; ?>
     <?php include_once($rootPath.'/header.php'); ?>
         <h1>Message bien reçu !</h1>
         

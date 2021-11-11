@@ -28,6 +28,11 @@ $comment = $postData['comment'];
 $recipeId = $postData['recipe_id'];
 $review = $postData['review'];
 
+$mysqlClient = $mysqlClient ?? NULL;
+$users = $users ?? [];
+$rootPath = $rootPath ?? '';
+
+
 $insertRecipe = $mysqlClient->prepare('INSERT INTO comments(comment, recipe_id, user_id, review) VALUES (:comment, :recipe_id, :user_id, :review)');
 $insertRecipe->execute([
     'comment' => $comment,
