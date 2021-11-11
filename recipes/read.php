@@ -13,6 +13,10 @@ if (!isset($getData['id']) && is_numeric($getData['id'])) {
 
 $recipeId = $getData['id'];
 
+$mysqlClient = $mysqlClient ?? null;
+$users = $users ?? [];
+$rootPath = $rootPath ?? '';
+
 $retrieveRecipeWithCommentsStatement = $mysqlClient->prepare('SELECT *, DATE_FORMAT(c.created_at, "%d/%m/%Y") as comment_date FROM recipes r LEFT JOIN comments c on r.recipe_id = c.recipe_id WHERE r.recipe_id = :id');
 $retrieveRecipeWithCommentsStatement->execute([
     'id' => $recipeId,

@@ -1,6 +1,7 @@
 <?php
 
 $postData = $_POST;
+$users = $users ?? [];
 
 if (isset($postData['email']) &&  isset($postData['password'])) {
     foreach ($users as $user) {

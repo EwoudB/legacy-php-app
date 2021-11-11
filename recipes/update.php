@@ -10,6 +10,10 @@ if (!isset($getData['id']) && is_numeric($getData['id'])) {
     return;
 }
 
+$mysqlClient = $mysqlClient ?? null;
+$rootUrl = $rootUrl ?? '';
+$rootPath = $rootPath ?? '';
+
 $retrieveRecipeStatement = $mysqlClient->prepare('SELECT * FROM recipes WHERE recipe_id = :id');
 $retrieveRecipeStatement->execute([
     'id' => $getData['id'],

@@ -20,6 +20,10 @@ $id = $postData['id'];
 $title = $postData['title'];
 $recipe = $postData['recipe'];
 
+$mysqlClient = $mysqlClient ?? null;
+$loggedUser = $loggedUser ?? [];
+$rootPath = $rootPath ?? '';
+
 $insertRecipeStatement = $mysqlClient->prepare('UPDATE recipes SET title = :title, recipe = :recipe WHERE recipe_id = :id');
 $insertRecipeStatement->execute([
     'title' => $title,
