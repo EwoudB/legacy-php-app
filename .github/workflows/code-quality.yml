@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: [ '7.4', '8.0' ]
+        php: [ '8.0' ]
       fail-fast: false
     steps:
       - name: Setup PHP
@@ -19,7 +19,7 @@ jobs:
         run: composer install --ansi --prefer-dist --no-interaction --no-progress
       
       - name: Composer Install PHP-CS-Fixer
-        run: cd tools & composer install --ansi --prefer-dist --no-interaction --no-progress
+        run: cd tools/php-cs-fixer && composer install --ansi --prefer-dist --no-interaction --no-progress
 
       - name: Run Code Quality checks
         run: composer check-quality
