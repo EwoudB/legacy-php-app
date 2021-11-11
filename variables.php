@@ -1,6 +1,6 @@
 <?php
 
-$mysqlClient = $mysqlClient ?? NULL;
+$mysqlClient = $mysqlClient ?? null;
 // Récupération des variables à l'aide du client MySQL
 $usersStatement = $mysqlClient->prepare('SELECT * FROM users');
 $usersStatement->execute();

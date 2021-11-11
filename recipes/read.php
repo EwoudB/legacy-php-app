@@ -13,7 +13,7 @@ if (!isset($getData['id']) && is_numeric($getData['id'])) {
 
 $recipeId = $getData['id'];
 
-$mysqlClient = $mysqlClient ?? NULL;
+$mysqlClient = $mysqlClient ?? null;
 $users = $users ?? [];
 $rootPath = $rootPath ?? '';
 

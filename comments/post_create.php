@@ -28,7 +28,7 @@ $comment = $postData['comment'];
 $recipeId = $postData['recipe_id'];
 $review = $postData['review'];
 
-$mysqlClient = $mysqlClient ?? NULL;
+$mysqlClient = $mysqlClient ?? null;
 $users = $users ?? [];
 $rootPath = $rootPath ?? '';
 

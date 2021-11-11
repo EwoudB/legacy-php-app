@@ -10,7 +10,7 @@ if (!isset($getData['id']) && is_numeric($getData['id'])) {
     return;
 }
 
-$mysqlClient = $mysqlClient ?? NULL;
+$mysqlClient = $mysqlClient ?? null;
 $rootUrl = $rootUrl ?? '';
 $rootPath = $rootPath ?? '';
 

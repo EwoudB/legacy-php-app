@@ -18,7 +18,7 @@ if (
 $title = $postData['title'];
 $recipe = $postData['recipe'];
 
-$mysqlClient = $mysqlClient ?? NULL;
+$mysqlClient = $mysqlClient ?? null;
 $loggedUser = $loggedUser ?? [];
 $rootPath = $rootPath ?? '';
 
