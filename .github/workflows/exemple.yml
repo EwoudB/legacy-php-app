@@ -1,18 +1,18 @@
 # .github/worflows/exemple.yml
 name: Workflow de test
-on: [push]
+on: [pull_request, push]
 jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 Ce job a été déclenché par l'événement ''${{ github.event_name }}''."
-      - run: echo "🐧 Ce job est lancé sur le serveur ''${{ runner.os }}'' mis à disposition par GitHub!"
+      - run: echo "🎉 Le job a été déclenché par l'événement ''${{ github.event_name }}''."
+      - run: echo "🐧 Le job est lancé sur le serveur ''${{ runner.os }}'' mis à disposition par GitHub!"
       - run: echo "🔎 Le nom de la branche est ''${{ github.ref }}'' et celui du dépôt est ''${{ github.repository }}''."
       - name: Prendre seulement le dernier commit
         uses: actions/checkout@v2
       - run: echo "💡 Le dépôt ''${{ github.repository }}'' a été clôné dans l'environnement mis à disposition."
-      - run: echo "🖥️ On peut donc commencer à tester notre application."
-      - name: Lister les fichier disponibles
+      - run: echo "🖥️ On peut donc commencer à tester notre application..."
+      - name: Lister les fichier disponibles dans le dépôt
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 Statut du job: *${{ job.status }}*."
+      - run: echo "🍏 Statut du job ... ''${{ job.status }}'' !"
