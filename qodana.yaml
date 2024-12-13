@@ -8,7 +8,7 @@
   linter: jetbrains/qodana-php:2024.2
 
   profile:
-    name: qodana.starter
+    path: qodana/profile.yaml
   #Enable inspections
   #include:
 
@@ -31,8 +31,7 @@
   #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
 
   # referentie naar .qodana/profile.yaml file, dit is je eigen gemaakte file uit hoorcollege
-  path: .qodana/profile.yaml
-  name: qodana.recommended
-#  include:
-#    - name: CheckDependencyLicenses
+
+  include:
+    - name: PhpVulnerablePathsInspection
 #      path:
