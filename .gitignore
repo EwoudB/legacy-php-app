@@ -1,2 +1,8 @@
 vendor
 .php-cs-fixer.cache
+.idea/inspectionProfiles/Project_Default.xml
+.idea/legacy-php-app.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/php.xml
+.idea/vcs.xml

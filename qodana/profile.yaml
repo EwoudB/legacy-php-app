@@ -1,0 +1,11 @@
+version: "1.0"
+name: "my qodana file"
+baseProfile: qodana.recommended
+
+inspections:
+  - inspection: PhpMethodNamingConventionInspection
+    enabled: true
+    options:
+      m_minLength: 3
+      m_regex: "[a-z][_a-z\\d]*"
+
